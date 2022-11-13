@@ -1,0 +1,17 @@
+.footer{
+    @apply bg-none bg-amber-300 h-[522px] flex items-center justify-center
+}
+.cont{
+    @apply  bg-amber-700  items-center m-9 p-3
+}
+.tittle{
+    @apply text-[48px]
+}
+
+.contFooter{
+ @apply  flex  items-center
+}
+
+.subTittle{
+    @apply  text-[30px] w-[35%] text-center
+}

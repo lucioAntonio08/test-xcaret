@@ -1,0 +1,11 @@
+.main{
+    @apply bg-green-200 text-black h-[94px] p-3.5 flex justify-between items-center;
+}
+
+.title{
+    @apply flex items-center  font-bold w-[250px] justify-around text-2xl;
+}
+
+.contact{
+    @apply flex justify-around  w-[200px];
+}
