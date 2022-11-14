@@ -1,0 +1,24 @@
+.cont{
+    @apply flex p-20 w-[1150px] justify-center items-center my-0 mx-auto
+}
+.img{
+    @apply w-[600px] h-[460px]
+}
+.info{
+    @apply flex flex-col justify-center p-3
+}
+
+.logo{
+    @apply w-[65px] h-[96px] mb-[20px]
+}
+
+.title{
+    @apply text-3xl my-2
+}
+.text {
+    @apply my-2 mx-auto text-xl
+}
+
+.btn{
+    @apply bg-amber-50 w-[200px] text-neutral-900 h-[30px] my-3 mx-auto
+}
