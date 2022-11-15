@@ -1,0 +1,21 @@
+.media{
+    @apply max-w-[450px] mx-auto flex h-[350px] p-10 my-1
+}
+.image{
+    @apply relative
+}
+.logo{
+    @apply z-10 relative max-w-[70px]  right-[57%] h-24 top-60
+}
+.cont{
+    @apply max-w-[450px] mx-auto py-1 px-10
+}
+.title{
+    @apply mx-auto text-center text-2xl my-2
+}
+.button{
+    @apply mx-auto text-center border border-black w-[100%] items-center my-4
+}
+.cont p{
+    @apply my-2
+}

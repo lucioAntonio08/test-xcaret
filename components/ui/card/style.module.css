@@ -1,11 +1,11 @@
 .cont{
-    @apply flex p-20 w-[1150px] justify-center items-center my-0 mx-auto
+    @apply flex p-12 justify-center items-center my-0 mx-auto flex-wrap
 }
 .img{
-    @apply w-[600px] h-[460px]
+    @apply max-w-[600px] min-w-[300px]
 }
 .info{
-    @apply flex flex-col justify-center p-3
+    @apply flex flex-col justify-center p-3 max-w-[500px]
 }
 
 .logo{
@@ -16,9 +16,9 @@
     @apply text-3xl my-2
 }
 .text {
-    @apply my-2 mx-auto text-xl
+    @apply my-2 mx-auto text-xl max-w-[350px]
 }
 
 .btn{
-    @apply bg-amber-50 w-[200px] text-neutral-900 h-[30px] my-3 mx-auto
+    @apply w-[200px]  h-[30px] my-3 mx-auto border-black border-[1px]
 }

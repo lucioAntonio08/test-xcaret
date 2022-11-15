@@ -1,0 +1,7 @@
+.main{
+    @apply flex  flex-col
+}
+
+.main button{
+    @apply m-3 text-2xl
+}

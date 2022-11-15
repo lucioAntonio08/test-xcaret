@@ -11,9 +11,11 @@
   "dependencies": {
     "@emotion/react": "^11.10.5",
     "@emotion/server": "^11.10.0",
+    "@emotion/styled": "^11.10.5",
     "@mantine/core": "^5.7.1",
     "@mantine/hooks": "^5.7.1",
     "@mantine/next": "^5.7.1",
+    "@mui/icons-material": "^5.10.9",
     "@reduxjs/toolkit": "^1.9.0",
     "@types/node": "18.11.9",
     "@types/react": "18.0.25",

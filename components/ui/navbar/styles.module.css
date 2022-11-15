@@ -1,5 +1,5 @@
 .main{
-    @apply bg-green-200 text-black h-[94px] p-3.5 flex justify-between items-center;
+    @apply bg-[#ededed] text-black h-[94px] p-3.5 flex justify-between items-center;
 }
 
 .title{

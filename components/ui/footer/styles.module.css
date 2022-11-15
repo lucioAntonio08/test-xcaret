@@ -1,17 +1,24 @@
-.footer{
-    @apply bg-none bg-amber-300 h-[522px] flex items-center justify-center
+.politics{
+    @apply p-[20px] mx-auto bg-[#ebebeb] text-black
 }
-.cont{
-    @apply  bg-amber-700  items-center m-9 p-3
-}
-.tittle{
-    @apply text-[48px]
+.politics p {
+    @apply max-w-[990px] mx-auto text-[19px] p-2
 }
 
-.contFooter{
- @apply  flex  items-center
+.contact{
+    @apply flex  items-center justify-evenly bg-[#363636] p-8 text-white
+}
+.phone{
+    @apply flex w-[750px] justify-evenly text-white justify-items-start
 }
 
-.subTittle{
-    @apply  text-[30px] w-[35%] text-center
+
+.copyRight{
+    @apply flex justify-evenly bg-black text-white p-1
 }
+
+.terms{
+    @apply flex justify-evenly w-[400px]
+}
+
+
