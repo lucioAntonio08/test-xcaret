@@ -1,10 +1,12 @@
 import React from 'react';
-import {useAppDispatch} from "../../../hooks";
+import styles from './style.module.css'
 
 export const Sidenav = () => {
-    const dispatch = useAppDispatch()
     return (
-        <div>
+        <div className={styles.main}>
+            <button>Readme</button>
+            <button>Deskptop</button>
+            <button>mobil</button>
         </div>
     );
 };

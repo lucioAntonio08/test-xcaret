@@ -1,21 +1,24 @@
 import React, {useState} from 'react';
-import {Burger} from "@mantine/core";
+import {Burger, Drawer} from "@mantine/core";
 import {useAppDispatch, useAppSelector} from "../../../hooks";
 import {toggleMenu} from "../../../store/slices";
 import styles from "./styles.module.css"
+import {Sidenav} from "../sidenav";
 
 export const Navbar = () => {
-    //Todo redux implementations
     const {isMenuOpen} = useAppSelector(state => state.ui)
-    const [opened, setOpened] = useState(false);
-    const title = opened ? 'Close navigation' : 'Open navigation';
+    const dispatch = useAppDispatch()
+    const handleMenu =()=>{
+        dispatch(toggleMenu(!isMenuOpen))
+    }
+
+
     return (
         <div className={styles.main}>
             <div className={styles.title}>
                 <Burger
-                    opened={opened}
-                    onClick={() => setOpened((o) => !o)}
-                    title={title}
+                    opened={isMenuOpen}
+                    onClick={handleMenu}
                 />
                 <h1>Hoteles Xcaret</h1>
             </div>
@@ -24,6 +27,12 @@ export const Navbar = () => {
                 <h5>En</h5>
                 <h5>MXN</h5>
             </div>
+            <Drawer
+                opened={isMenuOpen}
+                onClose={handleMenu}
+            >
+                <Sidenav/>
+            </Drawer>
         </div>
     );
 };
