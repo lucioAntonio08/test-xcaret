@@ -1,6 +1,6 @@
 import React, {FC} from 'react';
 import {NavigationProps} from "../../interfaces";
-import {Navbar, Sidenav} from "../../components";
+import {Navbar} from "../../components";
 import CardXcaret from "../../components/ui/card";
 import BannerXcaret from "../../components/ui/banner";
 import FooterXcaret from "../../components/ui/footer";
