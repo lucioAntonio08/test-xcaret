@@ -2,8 +2,8 @@
     @apply bg-amber-50 flex  justify-center items-center flex-col
 }
 .media{
-    @apply w-[600px] h-[250px]  m-9
+    @apply max-h-[350px]  m-9 min-w-[50px]
 }
 .text{
-    @apply text-black font-bold  text-3xl m-9
+    @apply text-black font-bold  text-3xl m-9 text-center
 }

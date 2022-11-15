@@ -9,3 +9,6 @@
 .contact{
     @apply flex justify-around  w-[200px];
 }
+.select{
+    @apply bg-[#ededed]
+}

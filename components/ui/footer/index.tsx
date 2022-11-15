@@ -35,35 +35,32 @@ const FooterXcaret = () => {
             </div>
             <div>
                 <div className={styles.contact}>
+                    <div className={styles.socialMedia} >
+                        <FacebookOutlinedIcon fontSize={"large"}/>
+                        <InstagramIcon fontSize={"large"}/>
+                        <TwitterIcon fontSize={"large"}/>
+                    </div>
                     <p>
                         <b>ATENCIÓN A CLIENTES</b>
                         <br/>
                         reservaciones@hotelxcaret.com
                     </p>
-                    <div>
-                        <FacebookOutlinedIcon fontSize={"large"}/>
-                        <InstagramIcon fontSize={"large"}/>
-                        <TwitterIcon fontSize={"large"}/>
-                    </div>
                 </div>
-                <div className={styles.contact}>
                     <div className={styles.phone} >
                         <p>mexico</p>
                         <p>Canada-Eua</p>
+                        <select
+                            className={styles.select}
+                        >
+                            <option value="Resto del Mundo" selected>Resto del Mundo</option>
+                            <option value="Brasil" >Brasil</option>
+                            <option value="Argentina" >Argentina</option>
+                            <option value="Colombia" >Colombia</option>
+                            <option value="España" >España</option>
+                            <option value="Chile" >Chile</option>
 
-                    <Select
-                        placeholder='Resto del mundo'
-                        data={[
-                            {value: 'Brasil', label: 'Brasil'},
-                            {value: 'Argentina', label: 'Argentina'},
-                            {value: 'Colombia', label: 'Colombia'},
-                            {value: 'España', label: 'España'},
-                            {value: 'Chile', label: 'Chile'}
-                        ]}
-                    >
-                    </Select>
+                        </select>
                     </div>
-                </div>
             </div>
             <div className={styles.copyRight}>
                 <p>©Copyright Experiencias Xcaret Hotel S.A.P.I. de C.V.</p>

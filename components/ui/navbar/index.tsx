@@ -24,7 +24,14 @@ export const Navbar = () => {
             </div>
             <div className={styles.contact}>
                 <h5>Contacto</h5>
-                <h5>En</h5>
+                <select
+                    className={styles.select}
+                name='EN'
+                >
+                    <option value="value1" >ES</option>
+                    <option value="value2" >EN</option>
+
+                </select>
                 <h5>MXN</h5>
             </div>
             <Drawer

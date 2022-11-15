@@ -12,6 +12,10 @@ const ThankYou = () => {
             <Image
                 className={styles.media}
                 src={logo} alt={'Xcaret logo'}/>
+
+            <h1 className={styles.text}>
+                Thanks for your preference. Here are more things we can do for you
+            </h1>
             <h1
             className={styles.text}
             >Gracias por tu preferencia. Aquí hay más cosas que podemos hacer por ti
@@ -19,7 +23,7 @@ const ThankYou = () => {
             <h1
                 className={styles.text}
             >
-                Experiencias Xcaret
+                Xcaret experiences
             </h1>
             <Image src={experiences} alt={'experiences'}/>
         </div>
