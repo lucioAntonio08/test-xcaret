@@ -1,38 +1,74 @@
 import React, {FC} from 'react';
 import Image from "next/image";
-import xcaret from '../../images/xcaret-footer.jpg'
 import logo from '../../images/Xcaret-logo.png'
 import styles from './style.module.css'
 import {useAppDispatch, useAppSelector} from "../../../hooks";
-import {toggleMenu, toggleModal} from "../../../store/slices";
-import {Alert, Modal} from "@mantine/core";
-import {Button} from "@mui/material";
-import CheckCircleOutlinedIcon from '@mui/icons-material/CheckCircleOutlined';
-interface ICardNeeds {
-    title: string,
-    text: string,
-    subText: string
-    isImageLeft?: boolean
-}
-const CardXcaret: FC<ICardNeeds> = ({isImageLeft,text,title,subText}) => {
+import {toggleModal} from "../../../store/slices";
+import {ICardNeeds} from "../data/data";
+import ModalUi from "../modal-ui";
+import Carousel from "react-multi-carousel";
+import 'react-multi-carousel/lib/styles.css';
+import pool from '../../images/alberca.jpg'
+import sxcaret from '../../images/sostenibilidad.jpg'
+import xcaret from '../../images/xcaretarte.jpg'
+
+
+const CardXcaret: FC<ICardNeeds> = ({isImageLeft, text, title, subText}) => {
     const dispatch = useAppDispatch()
     const {isModalOpen} = useAppSelector(state => state.ui)
-    const handleOpen = () =>{
-        dispatch( toggleModal(!isModalOpen))
+    const handleOpen = () => {
+        dispatch(toggleModal(!isModalOpen))
     }
+    const responsive = {
+        desktop: {
+            breakpoint: {max: 3000, min: 900},
+            items: 3
+        },
+        tablet: {
+            breakpoint: {max: 1024, min: 600},
+            items: 2
+        },
+        mobile: {
+            breakpoint: {max: 464, min: 0},
+            items: 1,
+            slidesToSlide: 1
+        }
+    };
     return (
         <div
             className={styles.main}
         >
             <div
-                style={{flexDirection:  isImageLeft ? 'initial' : 'row-reverse'}}
+                style={{flexDirection: isImageLeft ? 'initial' : 'row-reverse'}}
                 className={styles.cont}>
-                <Image
-                    src={xcaret}
-                    alt={'img'}
-                    className={styles.img}
-                />
-
+                <div>
+                    <Carousel
+                        className={styles.carousel}
+                        infinite={true}
+                        keyBoardControl={true}
+                        removeArrowOnDeviceType={["tablet", "mobile"]}
+                        itemClass="carousel-item-padding-2-px"
+                        arrows={false}
+                        autoPlay
+                        autoPlaySpeed={5000}
+                        responsive={responsive}>
+                        <Image
+                            src={xcaret}
+                            alt={'img'}
+                            className={styles.imgCar}
+                        />
+                        <Image
+                            src={pool}
+                            alt={'img'}
+                            className={styles.imgCar}
+                        />
+                        <Image
+                            src={sxcaret}
+                            alt={'img'}
+                            className={styles.imgCar}
+                        />
+                    </Carousel>
+                </div>
                 <div className={styles.info}>
                     <Image
                         src={logo}
@@ -44,22 +80,11 @@ const CardXcaret: FC<ICardNeeds> = ({isImageLeft,text,title,subText}) => {
                     <p className={styles.text}>{subText}</p>
                     <button
                         onClick={handleOpen}
-                        className={styles.btn}>¡RESERVA AHORA!</button>
-                    <Modal
-                        opened={isModalOpen}
-                        onClose={handleOpen}
-                    >
-                        Resumen de compra
-                        <Button>Continuar</Button>
-                        <Alert
-                            icon={<CheckCircleOutlinedIcon fontSize="medium"/>}
-                            title="succses"
-                            color="green"
-                            variant="outline"
-                        >
-                        </Alert>
-                    </Modal>
-
+                        className={styles.btn}>¡RESERVA AHORA!
+                    </button>
+                    <ModalUi
+                        isOpen={isModalOpen}
+                    />
                 </div>
             </div>
         </div>

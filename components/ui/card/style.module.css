@@ -1,11 +1,17 @@
 .cont{
     @apply flex p-12 justify-center items-center my-0 mx-auto flex-wrap
 }
-.img{
-    @apply max-w-[600px] min-w-[300px]
+.imgCar{
+    @apply p-3 m-2 max-w-[210px] max-h-[175px]
 }
 .info{
     @apply flex flex-col justify-center p-3 max-w-[500px]
+}
+.carousel{
+    @apply max-w-[600px] min-w-[300px]
+}
+.contImg{
+    @apply m-2 w-[250px]
 }
 
 .logo{

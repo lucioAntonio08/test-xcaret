@@ -1,11 +1,14 @@
-import React, {useState} from 'react';
+import React, {useCallback, useEffect, useState} from 'react';
 import {Burger, Drawer} from "@mantine/core";
 import {useAppDispatch, useAppSelector} from "../../../hooks";
 import {toggleMenu} from "../../../store/slices";
 import styles from "./styles.module.css"
 import {Sidenav} from "../sidenav";
+import Image from "next/image";
+import logo from '../../images/hoteles-logos.png'
 
-export const Navbar = () => {
+
+export const NavbarUi = () => {
     const {isMenuOpen} = useAppSelector(state => state.ui)
     const dispatch = useAppDispatch()
     const handleMenu =()=>{
@@ -20,17 +23,18 @@ export const Navbar = () => {
                     opened={isMenuOpen}
                     onClick={handleMenu}
                 />
-                <h1>Hoteles Xcaret</h1>
+                <div>
+                    <Image
+                        className={styles.logo}
+                        src={logo} alt={'logo'}
+                    />
+                </div>
             </div>
             <div className={styles.contact}>
                 <h5>Contacto</h5>
-                <select
-                    className={styles.select}
-                name='EN'
-                >
-                    <option value="value1" >ES</option>
-                    <option value="value2" >EN</option>
-
+                <select className={styles.select}>
+                    <option >es</option>
+                    <option >en</option>
                 </select>
                 <h5>MXN</h5>
             </div>
@@ -42,4 +46,4 @@ export const Navbar = () => {
             </Drawer>
         </div>
     );
-};
+}

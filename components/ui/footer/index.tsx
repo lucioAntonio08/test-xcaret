@@ -4,8 +4,6 @@ import FacebookOutlinedIcon from '@mui/icons-material/FacebookOutlined';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import {Simulate} from "react-dom/test-utils";
-import error = Simulate.error;
-import {Select} from "@mantine/core";
 
 const FooterXcaret = () => {
 
@@ -51,8 +49,9 @@ const FooterXcaret = () => {
                         <p>Canada-Eua</p>
                         <select
                             className={styles.select}
+                            defaultValue={"Resto del Mundo"}
                         >
-                            <option value="Resto del Mundo" selected>Resto del Mundo</option>
+                            <option value="Resto del Mundo" >Resto del Mundo</option>
                             <option value="Brasil" >Brasil</option>
                             <option value="Argentina" >Argentina</option>
                             <option value="Colombia" >Colombia</option>
