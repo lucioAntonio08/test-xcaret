@@ -3,7 +3,6 @@ import styles from './styles.module.css'
 import FacebookOutlinedIcon from '@mui/icons-material/FacebookOutlined';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import TwitterIcon from '@mui/icons-material/Twitter';
-import {Simulate} from "react-dom/test-utils";
 
 const FooterXcaret = () => {
 

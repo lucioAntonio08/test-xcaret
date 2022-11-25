@@ -1,4 +1,4 @@
-import React, {useCallback, useEffect, useState} from 'react';
+import React from 'react';
 import {Burger, Drawer} from "@mantine/core";
 import {useAppDispatch, useAppSelector} from "../../../hooks";
 import {toggleMenu} from "../../../store/slices";

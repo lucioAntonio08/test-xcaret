@@ -6,7 +6,6 @@ import {uiSlice} from "./slices";
 export const store = configureStore({
     reducer: {
         ui: uiSlice.reducer,
-        // language: languageSlice.reducer,
     }
 })
 
