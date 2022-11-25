@@ -1,0 +1,13 @@
+.tittle{
+    @apply flex justify-center font-bold
+}
+.text{
+    @apply flex justify-between
+}
+.boxButton{
+    @apply flex justify-evenly
+}
+
+.boxButton button{
+    @apply bg-[#dea035] text-black rounded-[3px] m-2 border-black
+}

@@ -1,0 +1,30 @@
+.cont{
+    @apply flex p-12 justify-center items-center my-0 mx-auto flex-wrap
+}
+.imgCar{
+    @apply p-3 m-2 max-w-[210px] max-h-[175px]
+}
+.info{
+    @apply flex flex-col justify-center p-3 max-w-[500px]
+}
+.carousel{
+    @apply max-w-[600px] min-w-[300px]
+}
+.contImg{
+    @apply m-2 w-[250px]
+}
+
+.logo{
+    @apply w-[65px] h-[96px] mb-[20px]
+}
+
+.title{
+    @apply text-3xl my-2
+}
+.text {
+    @apply my-2 mx-auto text-xl max-w-[350px]
+}
+
+.btn{
+    @apply w-[200px]  h-[30px] my-3 mx-auto border-black border-[1px]
+}

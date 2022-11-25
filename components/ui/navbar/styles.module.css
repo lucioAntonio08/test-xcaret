@@ -1,0 +1,16 @@
+.main{
+    @apply bg-[#ededed] text-black h-[54px] p-3.5 flex justify-between items-center;
+}
+
+.title{
+    @apply flex items-center  font-bold w-[250px] justify-around text-2xl;
+}
+.logo{
+    @apply max-w-[100px] flex min-w-[100px] md:max-w-[250px] md:ml-6
+}
+.contact{
+    @apply flex justify-around  w-[200px];
+}
+.select{
+    @apply bg-[#ededed]
+}

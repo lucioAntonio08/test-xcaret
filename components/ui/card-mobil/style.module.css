@@ -1,0 +1,21 @@
+.main{
+    @apply max-w-[650px] mx-auto
+}
+.imgCar{
+    @apply w-[300px] mx-auto mt-14
+}
+.logo{
+    @apply z-10 relative max-w-[70px] left-[40%] h-24 -top-16 md:left-[50%]
+}
+.cont{
+    @apply max-w-[450px] mx-auto py-1 px-10
+}
+.title{
+    @apply mx-auto text-center text-2xl my-1
+}
+.btn{
+    @apply mx-auto text-center border border-black w-[100%] items-center my-4
+}
+.cont p{
+    @apply my-2
+}
