@@ -10,7 +10,6 @@ export default function Home() {
             <BrowserView>
                 <NavigationLayout/>
             </BrowserView>
-
             <MobileView>
                 <NavigationMobil/>
             </MobileView>

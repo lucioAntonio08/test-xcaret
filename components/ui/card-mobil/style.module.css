@@ -1,19 +1,19 @@
-.media{
-    @apply max-w-[450px] mx-auto flex h-[350px] p-10 my-1
+.main{
+    @apply max-w-[650px] mx-auto
 }
-.image{
-    @apply relative w-auto
+.imgCar{
+    @apply w-[300px] mx-auto mt-14
 }
 .logo{
-    @apply z-10 relative max-w-[70px]  right-[65%] md:right-[60%] lg:right-[59%] h-24 top-60
+    @apply z-10 relative max-w-[70px] left-[40%] h-24 -top-16 md:left-[50%]
 }
 .cont{
     @apply max-w-[450px] mx-auto py-1 px-10
 }
 .title{
-    @apply mx-auto text-center text-2xl my-2
+    @apply mx-auto text-center text-2xl my-1
 }
-.button{
+.btn{
     @apply mx-auto text-center border border-black w-[100%] items-center my-4
 }
 .cont p{

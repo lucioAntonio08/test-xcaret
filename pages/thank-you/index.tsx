@@ -1,17 +1,18 @@
 import React from 'react';
-import {Alert} from "@mantine/core";
-import CheckCircleOutlinedIcon from "@mui/icons-material/CheckCircleOutlined";
 import Image from "next/image";
-import logo from "../../images/hotel-xcaret.png"
-import experiences from '../../images/experiencias-xcaret.png'
 import styles from'./style.module.css'
+import logo from '../../components/images/hotel-xcaret.png'
+import logos from '../../components/images/experiencias-xcaret.png'
+import {useRouter} from "next/router";
 
 const ThankYou = () => {
+    const router = useRouter()
     return (
         <div className={styles.main}>
             <Image
                 className={styles.media}
-                src={logo} alt={'Xcaret logo'}/>
+                src={logo}
+                alt={'Xcaret logo'}/>
 
             <h1 className={styles.text}>
                 Thanks for your preference. Here are more things we can do for you
@@ -25,7 +26,13 @@ const ThankYou = () => {
             >
                 Xcaret experiences
             </h1>
-            <Image src={experiences} alt={'experiences'}/>
+            <Image src={logos} alt={'experiences'}/>
+            <button
+            className={styles.home}
+            onClick={()=>router.push('/')}
+            >
+                Home
+            </button>
         </div>
     );
 };

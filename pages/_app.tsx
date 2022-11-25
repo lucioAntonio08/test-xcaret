@@ -1,28 +1,35 @@
 import '../styles/globals.css'
-import type { AppProps } from 'next/app'
+import type {AppContext, AppProps} from 'next/app'
 import {Provider} from "react-redux";
 import {store} from "../store/store";
 import {useEffect} from "react";
+import {useAppDispatch} from "../hooks";
 
-export default function App({ Component, pageProps }: AppProps) {
+ function App({Component, pageProps}: AppProps) {
 
-    // const getData = () => {
-    //
-    //     const data = fetch('https://raw.githubusercontent.com/javialcocer/test-json/main/data.json')
+    // const getData = async () => {
+    //     const data = await fetch('https://raw.githubusercontent.com/javialcocer/test-json/main/data.json', {
+    //         method: 'GET',
+    //     })
     //         .then((response) => response.json())
-    //         .then((data) => console.log(data))
-    //         .catch((error)=>{
-    //             console.error('Error:',error)
+    //         .then((data) => (data))
+    //         .catch((error) => {
+    //             console.error('Error:', error)
     //         })
-    //     console.log(data)
+    //     const {es} = data
+    //     const {en} = data
+    //
+    //     localStorage.setItem('langEs',JSON.stringify(es))
+    //     localStorage.setItem('langEn',JSON.stringify(en))
     // }
     // useEffect(() => {
     //     getData()
     // }, []);
 
-  return (
-        <Provider store={store} >
-          <Component {...pageProps} />
+    return (
+        <Provider store={store}>
+            <Component {...pageProps} />
         </Provider>
-      )
+    )
 }
+export default App

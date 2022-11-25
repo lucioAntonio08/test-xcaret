@@ -1,29 +1,32 @@
 import React, {FC} from 'react';
 import {NavigationProps} from "../../interfaces";
-import {Navbar} from "../../components";
+import {NavbarUi} from "../../components";
 import CardXcaret from "../../components/ui/card";
 import BannerXcaret from "../../components/ui/banner";
 import FooterXcaret from "../../components/ui/footer";
-import ThankYou from "../../components/ui/thank-you";
+import {dataCards} from "../../components/ui/data/data";
 
 export const NavigationLayout: FC<NavigationProps> = () => {
     return (
         <>
-            <Navbar/>
+            <NavbarUi/>
             <BannerXcaret/>
-                <CardXcaret
-                    title={"HOTEL XCARET MÉXICO"}
-                    text={'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at porttitor sem erat volutpat. '}
-                    subText={'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at porttitor sem.  Aliquam erat volutpat.'}
-                />
-                <CardXcaret
-                    title={"HOTEL XCARET MÉXICO"}
-                    text={'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at porttitor sem erat volutpat. '}
-                    subText={'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at porttitor sem.  Aliquam erat volutpat.'}
-                    isImageLeft={true}
-                />
+            {
+                dataCards.map((card, index) =>(
+                    <div
+                        key={index}
+                    >
+                        <CardXcaret
+                            title={card.title}
+                            text={card.text}
+                            subText={card.subText}
+                            isImageLeft={card.isImageLeft}
+                        />
+                    </div>
+
+                ))
+            }
             <FooterXcaret/>
-            <ThankYou/>
         </>
     );
 };
