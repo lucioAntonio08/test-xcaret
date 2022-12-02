@@ -1,5 +1,7 @@
 .footer{
-    @apply bg-none bg-[#dadada] h-[522px] flex items-center justify-center  sm:w-auto
+    @apply bg-none bg-no-repeat bg-none
+    bg-[url('https://s3.us-east-1.amazonaws.com/comercial-production-gx-cms-content-bucket/concentrador-hoteles/home/slider-es/hxa-es-nuevo.webp')]
+    h-[522px] flex items-center justify-center  sm:w-auto
 }
 .cont{
     @apply items-center m-9 p-3 sm:p-1 sm:m-1

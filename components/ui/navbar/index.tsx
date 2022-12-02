@@ -1,5 +1,5 @@
 import React from 'react';
-import {Burger, Drawer} from "@mantine/core";
+import {Drawer} from "@mantine/core";
 import {useAppDispatch, useAppSelector} from "../../../hooks";
 import {toggleMenu} from "../../../store/slices";
 import styles from "./styles.module.css"
@@ -19,10 +19,6 @@ export const NavbarUi = () => {
     return (
         <div className={styles.main}>
             <div className={styles.title}>
-                <Burger
-                    opened={isMenuOpen}
-                    onClick={handleMenu}
-                />
                 <div>
                     <Image
                         className={styles.logo}
@@ -38,12 +34,6 @@ export const NavbarUi = () => {
                 </select>
                 <h5>MXN</h5>
             </div>
-            <Drawer
-                opened={isMenuOpen}
-                onClose={handleMenu}
-            >
-                <Sidenav/>
-            </Drawer>
         </div>
     );
 }
